@@ -1,5 +1,24 @@
 {% extends "base.html" %}
-{% block title %}Home - FlaskApp{% endblock %}
-{% block content %}
-    <h1> Welcome Home </h1>
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+<div class="donation-container">
+    <div class="donation-card">
+        <img src="{{ url_for('static', filename='assets/donation_banner.jpg') }}" alt="Animal" class="donation-img">
+        <div class="donation-info">
+            <h2>Sponsor an Animal</h2>
+            <p>Every little bit helps—be the reason this animal gets a second chance!</p>
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: {{ progress }}%;">{{ progress|round(1) }}%</div>
+            </div>
+
+            <p>{{ amount_raised }} Rs Donated so far</p>
+            <p>Goal: {{ total_goal }} Rs</p>
+
+            <button class="donate-btn">Donate!</button>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

@@ -1,0 +1,19 @@
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+        
+.navbar-custom {
+    background: linear-gradient(to right, #a8edea, #fed6e3);
+    padding: 15px;
+}
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+}
+.nav-link {
+    font-size: 1.2rem;
+    color: black !important;
+    margin-right: 15px;
+}

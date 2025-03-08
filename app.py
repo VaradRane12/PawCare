@@ -1,10 +1,10 @@
 from flask import Flask, render_template
+from home import home_bp 
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder= "templates")
+app.register_blueprint(home_bp)
 
-@app.route('/')
-def home():
-    return render_template('home.html')
+
 
 @app.route('/adoption')
 def adoption():

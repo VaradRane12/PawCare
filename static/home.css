@@ -1,0 +1,73 @@
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2d4967, #9a4d65);
+}
+
+.donation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Full screen height */
+}
+
+.donation-card {
+    display: flex;
+    align-items: center;
+    background-color: #2d4967;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.donation-img {
+    width: 40%;
+    border-radius: 15px;
+}
+
+.donation-info {
+    flex: 1;
+    padding: 10px;
+    color: white;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.donate-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.donate-btn:hover {
+    background-color: #444;
+}
