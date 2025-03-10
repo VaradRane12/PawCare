@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #2d4967, #9a4d65);
+    background: color( red green blue)
 }
 
 .donation-container {

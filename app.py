@@ -1,14 +1,14 @@
 from flask import Flask, render_template
 from home import home_bp 
-
+from foodBank import foodBank_bp
 app = Flask(__name__,template_folder= "templates")
 app.register_blueprint(home_bp)
-
+app.register_blueprint(foodBank_bp)
 
 
 @app.route('/adoption')
 def adoption():
-    return render_template('adoption.html')
+    return render_template('Adoption.html')
 
 @app.route('/volunteering')
 def volunteering():

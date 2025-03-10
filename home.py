@@ -4,7 +4,7 @@ home_bp = Blueprint('home', __name__)
 @home_bp.route('/')
 def home():
     total_goal = 2000 
-    amount_raised = 800 
+    amount_raised = 1500 
 
     progress = (amount_raised / total_goal) * 100 if total_goal > 0 else 0  
 
