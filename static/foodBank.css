@@ -1,0 +1,36 @@
+
+/* Ensure full-page responsive carousel */
+.carousel {
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel .carousel-item {
+    height: 500px; }
+
+.carousel img {
+    height: 500px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images cover the whole space nicely */
+}
+
+/* Semi-transparent dark overlay for better readability */
+.overlay-box {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+/* Adjust text styles for better visibility */
+.overlay-box h2, .overlay-box p {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Improve button appearance */
+
+
+/* Add a subtle button hover effect */
+.btn-primary:hover {
+    background-color: #0056b3;
+}

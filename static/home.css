@@ -1,73 +1,50 @@
-* {
-    font-family: 'Roboto Slab', serif;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: color( red green blue)
-}
 
 .donation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh; /* Full screen height */
+    background-color: #2c4864;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .donation-card {
     display: flex;
     align-items: center;
-    background-color: #2d4967;
-    border-radius: 15px;
-    padding: 20px;
-    max-width: 100%;
-    width: 100%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
 }
-
 .donation-img {
     width: 40%;
-    border-radius: 15px;
+    max-height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
 }
-
 .donation-info {
-    flex: 1;
-    padding: 10px;
+    padding: 20px;
     color: white;
-    text-align: left;
+    flex: 1;
 }
-
-h2 {
-    font-size: 2em;
-}
-
-.progress-bar-container {
-    width: 100%;
+.progress {
+    height: 20px;
     background-color: #ccc;
     border-radius: 5px;
     overflow: hidden;
-    margin: 10px 0;
 }
-
 .progress-bar {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
+    background-color: #4caf50;
+    transition: width 0.4s ease;
 }
-
 .donate-btn {
     background-color: black;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 1.2em;
-    cursor: pointer;
+    padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
 }
-
 .donate-btn:hover {
-    background-color: #444;
+    background-color: #333;
 }
