@@ -15,7 +15,7 @@ model = tf.keras.models.load_model("dog_breed_model.h5")  # Use your trained mod
 # Load class labels (dog breeds)
 with open("breed_labels.txt", "r") as f:
     breed_labels = [line.strip() for line in f.readlines()]
-
+# 
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
