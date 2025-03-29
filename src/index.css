@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+* {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/* This is the css code for the navbar and its components*/
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding: 15px 50px;
+  background: linear-gradient(to right, #7ce4dc, #e3ebf2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+}
+
+.navbar__logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.navbar__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2; 
+}
+
+
+.navbar__pawprint {
+  width: 100%;
+  max-width: none; /* Remove any width restrictions */
+  margin-left: 0;
+  margin-right: 0;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  height: 80px;
+  background: url('/public/logo_pawprint.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 1; /* Keeps pawprint behind text */
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar__item {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar__item:hover {
+  color: #2a9d8f;
+}
+
+
+/* This is the css code for the adopt banner and its components*/
+
+.adopt-banner {
+  width: 100%;
+  max-width: none; /* Remove any width restrictions */
+  margin-left: 0;
+  margin-right: 0;
+  padding: 40px 0;
+  background: linear-gradient(to right, #3b2f80, #5a4fcf);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+
+}
+
+.adopt-banner__title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.adopt-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+.adopt-banner__image {
+  width: 250px;
+  margin-left: 7%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.adopt-banner__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.adopt-banner__description {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.adopt-banner__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.adopt-banner__btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.adopt-banner__btn--learn {
+  background: black;
+  color: white;
+}
+
+.adopt-banner__btn--adopt {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+
+/*Quick Action Buttons CSS part*/
+
+.rescue-container {
+  width: 100%;
+  max-width: none; /* Remove any width restrictions */
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  padding: 20px 0;
+  background:linear-gradient(to right, #7ce4dc, #d9e8f5);
+  border-radius: 10px;
+}
+
+.rescue-btn {
+  background-color: #418fde;
+  color: black;
+  width: 220px; /* Fixed width for all buttons */
+  height: 50px; /* Fixed height for uniform size */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.rescue-btn:hover {
+  background-color: #2c72b5;
+}
+
+
+/* Sponsor Animal CSS */
+
+.sponsor-banner {
+  width: 100%;
+  max-width: none; /* Remove any width restrictions */
+  margin-left: 0;
+  margin-right: 0;
+  padding: 40px 0;
+  background: linear-gradient(to right, #2d4f80, #4c7fdc);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sponsor-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+
+.sponsor-banner__image {
+  width: 250px;
+  height: auto;
+  margin-left: 7%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.sponsor-banner__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.sponsor-banner__title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.sponsor-banner__description {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.sponsor-banner__progress-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.sponsor-banner__progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #d3d3d3;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.sponsor-banner__progress {
+  height: 100%;
+  background: black;
+  width: 70%;
+}
+
+.sponsor-banner__progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.sponsor-banner__amount {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.sponsor-banner__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.sponsor-banner__btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sponsor-banner__btn--donate {
+  background: black;
+  color: white;
+}
