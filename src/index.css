@@ -31,7 +31,7 @@
 }
 
 .navbar__title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: black;
   line-height: 1.2;
@@ -288,3 +288,63 @@
   background: black;
   color: white;
 }
+
+
+
+/* Code for Footer */
+.footer {
+  background: linear-gradient(to right, #2d4f80, #4c7fdc);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer__contact,
+.footer__social {
+  flex: 1;
+  text-align: left;
+}
+
+.footer__address {
+  flex: 1;
+  text-align: center;
+}
+
+.footer__logo img {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.footer__icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.footer__icons a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__icons a:hover {
+  color: #ffcc00;
+}
+
+.footer__bottom {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
