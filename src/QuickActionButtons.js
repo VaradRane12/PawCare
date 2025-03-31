@@ -1,19 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const QuickActionButton = () => {
-  const handleClick = (action) => {
-    alert(`You clicked: ${action}`);
-  };
+  const navigate = useNavigate(); // Hook for navigation
 
   return (
     <div className="rescue-container">
-      <button className="rescue-btn" onClick={() => handleClick("Schedule Sterilization")}>
+      <button className="rescue-btn" onClick={() => navigate("/sterilization")}>
         Schedule Sterilization
       </button>
-      <button className="rescue-btn" onClick={() => handleClick("Report a Rescue")}>
+      <button className="rescue-btn" onClick={() => navigate("/report-rescue")}>
         Report a Rescue
       </button>
-      <button className="rescue-btn" onClick={() => handleClick("Sponsor an Animal")}>
+      <button className="rescue-btn" onClick={() => navigate("/sponsor")}>
         Sponsor an Animal
       </button>
     </div>

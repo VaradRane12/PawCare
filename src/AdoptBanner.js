@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const AdoptBanner = ({image}) => {
+const AdoptBanner = ({ image }) => {
+  const navigate = useNavigate(); // Hook for navigation
+
   return (
     <section className="adopt-banner">
       <div className="adopt-banner__content">
@@ -11,8 +14,12 @@ const AdoptBanner = ({image}) => {
             Give a homeless pet a loving home—your kindness can change a life!
           </p>
           <div className="adopt-banner__buttons">
-            <button className="adopt-banner__btn adopt-banner__btn--learn">Learn More</button>
-            <button className="adopt-banner__btn adopt-banner__btn--adopt">Adopt an Animal</button>
+            <button className="adopt-banner__btn adopt-banner__btn--learn" onClick={() => navigate("/adopt")}>
+              Learn More
+            </button>
+            <button className="adopt-banner__btn adopt-banner__btn--adopt" onClick={() => navigate("/adopt")}>
+              Adopt an Animal
+            </button>
           </div>
         </div>
       </div>

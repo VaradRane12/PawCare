@@ -16,7 +16,6 @@ const Footer = () => {
           <h3>Address</h3>
           <p>123 Paw Street, Pet City, PC 56789</p>
           <div className="footer__logo">
-            <img src="/logo.png" alt="PawCare Logo" />
           </div>
         </div>
 
@@ -42,7 +41,10 @@ const Footer = () => {
 
       {/* Bottom Section: Copyright */}
       <div className="footer__bottom">
-        <p>&copy; {new Date().getFullYear()} PawCare. All Rights Reserved.</p>
+        <div className="footer__bottom-content">
+          <img src="/logo_pawprint.png" alt="PawCare Logo" className="footer__logo" />
+          <p>© 2025 PawCare. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

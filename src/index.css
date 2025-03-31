@@ -292,59 +292,86 @@
 
 
 /* Code for Footer */
+/* Footer Section */
 .footer {
-  background: linear-gradient(to right, #2d4f80, #4c7fdc);
-  color: white;
-  padding: 30px 20px;
+  background: white; /* Ensure footer background is white */
+  color: black; /* Text color */
+  padding: 40px 20px;
+  padding-top: 20px; /* Reduce top padding */
+  margin-top: 0; /* Ensure no extra margin */
   text-align: center;
+  border-top: 1px solid #ddd; /* Subtle border at the top */
 }
 
+/* Footer Container - Arrange items in a single row */
 .footer__container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row; /* Keep items in one row */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Distribute items evenly */
   max-width: 1200px;
   margin: auto;
-  flex-wrap: wrap;
   text-align: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Contact, Social, and Address Sections */
 .footer__contact,
-.footer__social {
-  flex: 1;
-  text-align: left;
-}
-
+.footer__social,
 .footer__address {
-  flex: 1;
-  text-align: center;
+  flex: 1; /* Distribute space evenly */
+  text-align: center; /* Center text */
+  padding: 10px;
 }
 
+/* Footer Logo */
 .footer__logo img {
   width: 100px;
   margin-top: 10px;
 }
 
+/* Social Media Icons */
 .footer__icons {
   display: flex;
   gap: 15px;
   margin-top: 10px;
-  justify-content: center;
+  justify-content: center; /* Center icons horizontally */
 }
 
 .footer__icons a {
-  color: white;
+  color: black; /* Set icon color to black */
   font-size: 20px;
   transition: color 0.3s ease-in-out;
 }
 
 .footer__icons a:hover {
-  color: #ffcc00;
+  color: #2d4f80; /* Slight color change on hover */
 }
 
+/* Bottom Footer Text */
 .footer__bottom {
-  margin-top: 20px;
-  font-size: 14px;
+  display: flex;
+  justify-content: center; /* Center contents horizontally */
+  align-items: center; /* Align items vertically */
+  padding: 10px 0;
+}
+
+.footer__bottom-content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and text */
+}
+
+.footer__logo {
+  width: 40px; /* Adjust as needed */
+  height: auto;
 }
 
 
+/* Responsive Design - Stack items on smaller screens */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center;
+  }
+}
