@@ -375,3 +375,40 @@
     text-align: center;
   }
 }
+
+
+/*Adopt Page Hero*/
+
+.adopt-page-hero {
+  width: 100%;
+  padding: 0 50px;         /* Same horizontal padding as the navbar */
+  box-sizing: border-box;  /* Include padding in the width calculation */
+  height: 80vh;            /* Adjust height as needed */
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  padding-top: 30px;  /* Creates a subtle gap inside the section */
+  padding-bottom: 30px; /* Ensures the same spacing below */
+  background: linear-gradient(to right, #7ce4dc, #e3ebf2); /* Gradient background matching navbar */
+}
+
+.adopt-page-hero__image {
+  width: 50%;              /* Each image fills half of the inner width */
+  height: 100%;
+  object-fit: cover;       /* Ensure images fill height without distorting aspect ratio */
+}
+
+.adopt-page-hero__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 2;
+}

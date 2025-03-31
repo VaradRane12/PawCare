@@ -5,7 +5,7 @@ import AdoptBanner from './AdoptBanner';
 import QuickActionButton from './QuickActionButtons';
 import SponsorBanner from './SponsorBanner';
 import Footer from './Footer';
-
+import Adopt from "./Adopt";
 
 
 function Home() {
@@ -26,7 +26,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/adopt"/>
+        <Route path="/adopt" element={<Adopt />}/>
         <Route path="/donate"/>
         <Route path="/volunteer"/>
         {/*<Route path="*" element={<NotFound />} />*/}
