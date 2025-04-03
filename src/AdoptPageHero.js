@@ -1,11 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const AdoptPageHero = ({ image1, image2, title }) => {
+const AdoptPageHero = ({ dogImage, catImage }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="adopt-page-hero">
-      <img src={image1} alt="Adopt Stray 1" className="adopt-page-hero__image" />
-      <img src={image2} alt="Adopt Stray 2" className="adopt-page-hero__image" />
-      {title && <h1 className="adopt-page-hero__title">{title}</h1>}
+      {/* Stray Dog Section */}
+      <div
+        className="adopt-page-hero__image-container"
+        onClick={() => navigate("/dog-adoption")} // Redirects to dog adoption page
+      >
+        <img src={dogImage} alt="Adopt Stray Dog" className="adopt-page-hero__image" />
+        <div className="adopt-page-hero__info">Learn more about adopting a stray dog!</div>
+      </div>
+
+      {/* Cat Section */}
+      <div
+        className="adopt-page-hero__image-container"
+        onClick={() => navigate("/cat-adoption")} // Redirects to cat adoption page
+      >
+        <img src={catImage} alt="Adopt Stray Cat" className="adopt-page-hero__image" />
+        <div className="adopt-page-hero__info">Discover how to adopt a stray cat!</div>
+      </div>
     </div>
   );
 };
