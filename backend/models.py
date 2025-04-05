@@ -1,4 +1,4 @@
-from backend import db
+from app import db
 
 class Volunteer(db.Model):
     id = db.Column(db.Integer, primary_key=True)

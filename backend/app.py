@@ -1,10 +1,26 @@
-import os
-import sys
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))  # ✅ Ensure the backend folder is in path
+from flask import Flask
+from config import Config
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_cors import CORS
 
-from backend import create_app  # ✅ Import properly
+db = SQLAlchemy()
+migrate = Migrate()
 
-app = create_app()
+def create_app():
+    app = Flask(__name__)
+    CORS(app)
+
+    app.config.from_object(Config)
+
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+    from routes import main_bp
+    app.register_blueprint(main_bp)
+
+    return app
 
 if __name__ == "__main__":
+    app = create_app()
     app.run(debug=True)

@@ -1,17 +1,12 @@
-from flask import Blueprint, jsonify, request
-from backend.models import db, Volunteer
+from flask import jsonify
+from . import main_bp
+from models import Volunteer
 
-volunteer_bp = Blueprint("volunteers", __name__)
-
-@volunteer_bp.route("/", methods=["GET"])
+@main_bp.route("/volunteers")
 def get_volunteers():
-    volunteers = Volunteer.query.all()
-    return jsonify([{"id": v.id, "name": v.name, "email": v.email} for v in volunteers])
-
-@volunteer_bp.route("/add", methods=["POST"])
-def add_volunteer():
-    data = request.json
-    new_volunteer = Volunteer(name=data["name"], email=data["email"])
-    db.session.add(new_volunteer)
-    db.session.commit()
-    return jsonify({"message": "Volunteer added"}), 201
+    sample_data = [
+        {"id": 1, "name": "John Doe", "email": "john@example.com", "location": "Pune"},
+        {"id": 2, "name": "Jane Smith", "email": "jane@example.com", "location": "Mumbai"},
+        {"id": 3, "name": "Alice Johnson", "email": "alice@example.com", "location": "Delhi"}
+    ]
+    return jsonify(sample_data)
