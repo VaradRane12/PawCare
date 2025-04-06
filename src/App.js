@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import Navbar from './Navbar';
 import AdoptBanner from './AdoptBanner';
@@ -9,27 +10,43 @@ import Adopt from "./Adopt";
 import VolunteerPage from "./VolunteerPage";
 
 function Home() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/home-data")
+      .then(res => res.json())
+      .then(setData)
+      .catch(err => console.error("Error fetching home data:", err));
+  }, []);
+
+  if (!data) return <div className="text-center p-4">Loading...</div>;
+
   return (
     <div className="App">
       <Navbar />
       <QuickActionButton />
-      <SponsorBanner image={require("./images/adopt_banner_dog.jpg")} amountDonated={700} totalAmount={1000} />
+      <SponsorBanner
+        image={data.banner_image}  // use full external URL directly
+        amountDonated={data.amount_donated}
+        totalAmount={data.total_amount}
+      />
       <div className="blurred-gradient" />
-      <AdoptBanner image={require("./images/adopt_banner_dog.jpg")} />
+      <AdoptBanner image={data.banner_image} />
       <Footer />
     </div>
   );
 }
+
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/adopt" element={<Adopt />}/>
-        <Route path="/donate"/>
+        <Route path="/adopt" element={<Adopt />} />
         <Route path="/volunteering" element={<VolunteerPage />} />
-        {/*<Route path="*" element={<NotFound />} />*/}
+        {/* <Route path="/donate" element={<Donate />} /> */}
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </Router>
   );
