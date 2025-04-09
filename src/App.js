@@ -8,7 +8,7 @@ import SponsorBanner from './SponsorBanner';
 import Footer from './Footer';
 import Adopt from "./Adopt";
 import VolunteerPage from "./VolunteerPage";
-
+import Faq from "./Faq";
 function Home() {
   const [data, setData] = useState(null);
 
@@ -50,6 +50,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/volunteering" element={<VolunteerPage />} />
+        <Route path="/faq" element={<Faq />} /> 
         {/* <Route path="/donate" element={<Donate />} /> */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
