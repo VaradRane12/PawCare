@@ -1,70 +1,70 @@
-# PawCare
-This project aims to enhance the welfare of stray animals by leveraging digital tracking and management technologies. The lack of centralized data and real-time monitoring for stray dogs often results in delayed medical care, uncoordinated vaccination efforts, and inefficient adoption processes. To address these challenges, a comprehensive web and mobile platform was developed, incorporating geolocation tracking, automated notifications, and centralized record-keeping for medical and adoption details. Feedback from workshops and surveys with volunteers and NGOs led to significant improvements in response times and care coordination. The system has improved disease control and community safety through timely interventions and responsible adoptions. Future plans include integrating AI for predictive analysis and expanding regional coverage to ensure a sustainable, long-term impact on stray animal welfare and public health.
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-# Project Setup Guide
+In the project directory, you can run:
 
-## Setting Up a Virtual Environment
+### `npm start`
 
-A virtual environment helps isolate dependencies for this project, ensuring compatibility and avoiding conflicts with system-wide packages.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Steps to Create a Virtual Environment
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-1. **Ensure Python is Installed**  
-   Check if Python is installed by running:
-   ```sh
-   python --version
-   ```
-   or
-   ```sh
-   python3 --version
-   ```
+### `npm test`
 
-2. **Create a Virtual Environment**  
-   Run the following command in the project directory:
-   ```sh
-   python -m venv venv
-   ```
-   or (if using Python 3)
-   ```sh
-   python3 -m venv venv
-   ```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-3. **Activate the Virtual Environment**  
-   - **Windows (cmd/PowerShell):**
-     ```sh
-     venv\Scripts\activate
-     ```
-   - **Mac/Linux:**
-     ```sh
-     source venv/bin/activate
-     ```
+### `npm run build`
 
-## Installing Dependencies
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Once the virtual environment is activated, install dependencies using the `requirements.txt` file.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```sh
-pip install -r requirements.txt
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Deactivating the Virtual Environment
+### `npm run eject`
 
-To exit the virtual environment, run:
-```sh
-deactivate
-```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Additional Notes
-- If `pip` is not installed or outdated, upgrade it using:
-  ```sh
-  python -m pip install --upgrade pip
-  ```
-- If there are multiple `requirements` files, install all by running:
-  ```sh
-  pip install -r requirements/dev.txt -r requirements/prod.txt
-  ```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Now you're all set to run the project within a properly isolated environment!
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
