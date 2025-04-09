@@ -6,6 +6,7 @@ import QuickActionButton from './QuickActionButtons';
 const Faq = () => {
     const [image, setImage] = useState(null);
     const [breed, setBreed] = useState(null);
+    const [info,setinfo] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
 
 
@@ -27,6 +28,7 @@ const Faq = () => {
             });
             const result = await response.json();
             setBreed(result.breed);
+            setinfo(result.info)
             setSuccessMessage('Image uploaded successfully!');
 
             // Hide message after 3 seconds
@@ -84,6 +86,26 @@ const Faq = () => {
                         <p className="text-gray-800 text-lg">{breed}</p>
                     </div>
                 )}
+                {info && (
+                    <div className="mt-6 p-4 bg-yellow-100 rounded-lg shadow">
+                    <h2 className="text-2xl font-bold text-yellow-800 mb-2">{info.name}</h2>
+                    <p><strong>Bred For:</strong> {info.bred_for}</p>
+                    <p><strong>Group:</strong> {info.breed_group}</p>
+                    <p><strong>Life Span:</strong> {info.life_span}</p>
+                    <p><strong>Temperament:</strong> {info.temperament}</p>
+                    <p><strong>Height:</strong> {info.height.imperial} in / {info.height.metric} cm</p>
+                    <p><strong>Weight:</strong> {info.weight.imperial} lbs / {info.weight.metric} kg</p>
+                    {info.reference_image_id && (
+                        <img
+                        src={`https://cdn2.thedogapi.com/images/${info.reference_image_id}.jpg`}
+                        alt={info.name}
+                        className="mt-4 rounded-md w-64 h-auto"
+                        />
+                    )}
+                    </div>
+                )}
+  
+
 
                 
             </div>

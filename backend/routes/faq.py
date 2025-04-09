@@ -7,7 +7,7 @@ from PIL import Image
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
-
+import requests
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -51,7 +51,11 @@ def upload_image():
         # Predict breed
         preds = model.predict(img_array)
         breed = breed_labels[np.argmax(preds)]
-        return jsonify({"message":"sucess ",'breed': breed}),200
+
+        request1  = requests.get(f"https://api.thedogapi.com/v1/breeds/search?q={breed}")
+        info = request1.json()
+        print(info)
+        return jsonify({"message":"sucess ",'breed': breed, "info": info[0]}),200
     # img = Image.open(file) # Replace "your_image.jpg" with the actual path to your image file
     # img.show()
     if file.filename == '':
@@ -65,11 +69,5 @@ def upload_image():
 
     return jsonify({'error': 'Invalid file type'}), 400
 
-@main_bp.route("/data", methods=["GET"])
-def get_dummy_data():
-    return jsonify({
-        "status": "success",
-        "data": {
-            "info": "This is some mock data returned from the backend."
-        }
-    })
+
+
