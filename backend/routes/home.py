@@ -7,6 +7,6 @@ from . import main_bp
 def home_data():
     return jsonify({
         "banner_image": "https://i.ibb.co/xqxwGyjw/y.jpg",  # Make sure this image exists in /static/images/
-        "amount_donated": 10,
+        "amount_donated": 500,
         "total_amount": 1000
     })

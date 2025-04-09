@@ -23,17 +23,22 @@ function Home() {
 
   return (
     <div className="App">
-      <Navbar />
-      <QuickActionButton />
-      <SponsorBanner
+<div className="space-y-4">
+  <Navbar />
+  <QuickActionButton />
+  <SponsorBanner
         image={data.banner_image}  // use full external URL directly
         amountDonated={data.amount_donated}
         totalAmount={data.total_amount}
       />
-      <div className="blurred-gradient" />
+        <div className="blurred-gradient" />
       <AdoptBanner image={data.banner_image} />
       <Footer />
     </div>
+</div>
+
+
+    
   );
 }
 
