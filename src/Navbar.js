@@ -20,6 +20,8 @@ const Navbar = () => {
         <li className="navbar__item" onClick={() => navigate("/faq")}>FAQ</li>
         <li className="navbar__item" onClick={() => navigate("/awareness")}>Awareness</li>
         <li className="navbar__item" onClick={() => navigate("/rescue-cases")}>Rescue Cases</li>
+        <li className="navbar__item" onClick={() => navigate("/food-bank")}>Food Bank</li>
+
       </ul>
     </nav>
   );

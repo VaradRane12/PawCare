@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 * {
@@ -30,9 +33,9 @@
 }
 
 .navbar__title {
-  font-size: 20px;
+  font-size: 45px;
   font-weight: 700;
-  color: black;
+  color: rgb(0, 0, 0);
   line-height: 1.2;
   position: relative;
   z-index: 2; 
@@ -46,12 +49,12 @@
   position: absolute;
   left: -10px;
   top: -10px;
-  height: 80px;
-  background: url('/public/logo_pawprint.png') no-repeat center;
+  height: 100px;
+  background: url('/public/Logo\ \(2\).png') no-repeat center;
   background-size: contain;
+
   opacity: 0.2;
-  z-index: 1;
-}
+  z-index: 1; /* Keeps pawprint behind text */
 
 .navbar__menu {
   list-style: none;
@@ -60,7 +63,7 @@
 }
 
 .navbar__item {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: black;
   cursor: pointer;
@@ -115,7 +118,7 @@
   padding: 40px 0;
   background: linear-gradient(to right, #3b2f80, #5a4fcf);
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   flex-direction: column; /* Stack elements vertically */
@@ -191,12 +194,14 @@
   max-width: none; /* Remove any width restrictions */
   margin-left: 0;
   margin-right: 0;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   gap: 70px;
   padding: 20px 0;
   background: linear-gradient(to right, #7ce4dc, #d9e8f5);
   border-radius: 10px;
+
 }
 
 .rescue-btn {
@@ -254,7 +259,7 @@
   padding: 40px 0;
   background: linear-gradient(to right, #2d4f80, #4c7fdc);
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
