@@ -11,6 +11,9 @@ import VolunteerPage from "./VolunteerPage";
 import Donate from "./Donate";
 import Faq from "./Faq";
 import DogAdoptionPage from "./DogAdoptionPage";
+import Awareness from "./Awareness";
+import AdoptCat from "./AdoptCat";
+import AdoptDog from "./AdoptDog";
 import PaymentPage from "./payment";
 function Home() {
   const [data, setData] = useState(null);
@@ -54,10 +57,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/volunteering" element={<VolunteerPage />} />
-        <Route path="/faq" element={<Faq />} /> 
-        <Route path="/dog-adoption" element={<DogAdoptionPage />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/awareness" element={<Awareness />} />
+        <Route path="/cat-adoption" element={<AdoptCat />} />
+        <Route path="/dog-adoption" element={<AdoptDog />} />
 
-        {/* <Route path="/donate" element={<Donate />} /> */}
+        <Route path="/donate" element={<Donate />} />
+
         <Route path="/donate" element={<Donate />} />
         <Route path="/payment/:id/:payLimit" element={<PaymentPage />} />
         </Routes>
