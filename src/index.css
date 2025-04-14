@@ -55,7 +55,7 @@
 
   opacity: 0.2;
   z-index: 1; /* Keeps pawprint behind text */
-
+}
 .navbar__menu {
   list-style: none;
   display: flex;
@@ -141,7 +141,7 @@
 }
 
 .adopt-banner__image {
-  width: 250px;
+  width: 400px;
   margin-left: 7%;
   height: auto;
   object-fit: cover;
@@ -274,7 +274,7 @@
 }
 
 .sponsor-banner__image {
-  width: 250px;
+  width: 400px;
   height: auto;
   margin-left: 7%;
   object-fit: cover;

@@ -1,0 +1,14 @@
+name,image_url,amount_donated,total_amount,Species,Age,Behavior,Potty_Trained
+Buddy,https://i.ibb.co/pj2NR7cv/01-stray-dogs-nation...,588,2548,Dog,10 Years,Shy,Yes
+Whiskers,https://i.ibb.co/sdFFJ0DD/245057-1600x1063-str...,1656,2816,Cat,12 Years,Calm,No
+Rex,https://i.ibb.co/NdFgSwcC/Getty-Images-1778501...,2170,2936,Cat,4 Years,Calm,No
+Shadow,https://i.ibb.co/pj9JtRZ4/Stray-Dog-Bahamas.jpg,696,3845,Dog,8 Years,Energetic,Yes
+Mittens,https://i.ibb.co/ymWPKsP7/Stray-CAt-800-x-600-...,1295,2466,Cat,8 Years,Energetic,Yes
+Max,https://i.ibb.co/1JJvf4b1/Stray-Dog.jpg,1067,1735,Dog,3 Years,Friendly,No
+Rocky,https://i.ibb.co/RTNGM538/Stray-Dog-Dirty-Stre...,1560,3625,Dog,8 Years,Playful,Yes
+Daisy,https://i.ibb.co/PsDKMkdv/T7e-RZYPth4-Ux1-Arb-...,2625,3758,Cat,7 Years,Playful,No
+Luna,https://i.ibb.co/35xVGFR1/VIER-PFOTEN-2023-02-...,1190,3471,Dog,4 Years,Calm,No
+Karu,https://i.ibb.co/1M8WZXf/karu-dog.jpg,1537,1868,Dog,5 Years,Friendly,No
+Bruno,https://i.ibb.co/Yt9w4XL/bruno-dog.jpg,1011,1474,Dog,2 Years,Energetic,Yes
+Luna,https://i.ibb.co/G7ZrHh3/luna-cat.jpg,562,1963,Cat,12 Years,Calm,No
+Milo,https://i.ibb.co/9qxVq0r/milo-dog.jpg,3469,3892,Dog,9 Years,Friendly,No
