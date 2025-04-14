@@ -14,7 +14,8 @@ import DogAdoptionPage from "./DogAdoptionPage";
 import Awareness from "./Awareness";
 import AdoptCat from "./AdoptCat";
 import AdoptDog from "./AdoptDog";
-import PaymentPage from "./payment";
+import FoodBank from "./FoodBank";
+/*import PaymentPage from "./payment";*/
 function Home() {
   const [data, setData] = useState(null);
 
@@ -62,9 +63,9 @@ function App() {
         <Route path="/dog-adoption" element={<AdoptDog />} />
 
         <Route path="/donate" element={<Donate />} />
-
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/food-bank" element={<FoodBank />} />
+        
+        {/*<Route path="/payment" element={<PaymentPage />} />*/}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </Router>
