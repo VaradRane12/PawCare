@@ -11,6 +11,9 @@ import VolunteerPage from "./VolunteerPage";
 import Donate from "./Donate";
 import Faq from "./Faq";
 import DogAdoptionPage from "./DogAdoptionPage";
+import Awareness from "./Awareness";
+import AdoptCat from "./AdoptCat";
+import AdoptDog from "./AdoptDog";
 function Home() {
   const [data, setData] = useState(null);
 
@@ -52,14 +55,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/volunteering" element={<VolunteerPage />} />
-        <Route path="/faq" element={<Faq />} /> 
-<<<<<<< HEAD
-        <Route path="/dog-adoption" element={<DogAdoptionPage />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/awareness" element={<Awareness />} />
+        <Route path="/cat-adoption" element={<AdoptCat />} />
+        <Route path="/dog-adoption" element={<AdoptDog />} />
 
         {/* <Route path="/donate" element={<Donate />} /> */}
-=======
         <Route path="/donate" element={<Donate />} />
->>>>>>> 2cc319f4450db0928dabecf83c1c9015fcc58823
+
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </Router>
