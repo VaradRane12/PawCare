@@ -907,40 +907,39 @@
   background: linear-gradient(to right, #21867a, #3bbf96);
 }
 
-.form-container,
-.sterilization-form-container,
-.rescue-report-form-container {
-  background: #f5f8fa;
+.sterilization-form-container {
+  background: #f0f9f8;
   padding: 30px;
   border-radius: 12px;
   max-width: 500px;
-  margin: 50px auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: 60px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
-h2 {
+.sterilization-form-container h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #2a9d8f;
 }
 
-form {
+.sterilization-form-container form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
 }
 
-input,
-select,
-textarea {
+.sterilization-form-container input,
+.sterilization-form-container select {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  resize: none;
+  font-family: inherit;
+  background: white;
 }
 
-button {
+.sterilization-form-container button {
   padding: 12px;
   background-color: #2a9d8f;
   color: white;
@@ -948,9 +947,58 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
+.sterilization-form-container button:hover {
   background-color: #21867a;
+}
+
+
+.rescue-report-form-container {
+  background: #fff4f2;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 60px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.rescue-report-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e76f51;
+}
+
+.rescue-report-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rescue-report-form-container input,
+.rescue-report-form-container textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  background: white;
+  resize: none;
+}
+
+.rescue-report-form-container button {
+  padding: 12px;
+  background-color: #e76f51;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rescue-report-form-container button:hover {
+  background-color: #d55b40;
 }
