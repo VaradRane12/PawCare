@@ -30,6 +30,7 @@ function Home() {
   <Navbar />
   <QuickActionButton />
   <SponsorBanner
+        id = {data.id}
         image={data.banner_image}  // use full external URL directly
         amountDonated={data.amount_donated}
         totalAmount={data.total_amount}
@@ -58,9 +59,8 @@ function App() {
 
         {/* <Route path="/donate" element={<Donate />} /> */}
         <Route path="/donate" element={<Donate />} />
-        <Route path="/payment" element={<PaymentPage />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
+        <Route path="/payment/:id/:payLimit" element={<PaymentPage />} />
+        </Routes>
     </Router>
   );
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const SponsorBanner = ({ image, amountDonated, totalAmount }) => {
+const SponsorBanner = ({ id,image, amountDonated, totalAmount }) => {
   const navigate = useNavigate(); // Hook for navigation
   const progress = Math.min((amountDonated / totalAmount) * 100, 100);
-
+  const payLimit = totalAmount-amountDonated
   return (
     <div className="sponsor-banner">
       <div className="sponsor-banner__content">
@@ -27,8 +27,8 @@ const SponsorBanner = ({ image, amountDonated, totalAmount }) => {
           <div className="sponsor-banner__buttons">
             <button
               className="sponsor-banner__btn sponsor-banner__btn--donate"
-              onClick={() => navigate("/Payment")}
-            >
+              onClick={() => navigate(`/payment/${id}/${payLimit}`)}
+              >
               Donate!
             </button>
           </div>
