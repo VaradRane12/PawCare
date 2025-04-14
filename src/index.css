@@ -917,11 +917,7 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #2a9d8f;
-}
+
 
 form {
   display: flex;
