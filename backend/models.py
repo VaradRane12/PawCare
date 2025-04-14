@@ -17,3 +17,12 @@ class AdoptableAnimal(db.Model):
     vaccinated = db.Column(db.Boolean,nullable = True)
     def __repr__(self):
         return f"<AdoptableAnimal {self.name} ({self.species})>"
+class FoodBankItem(db.Model):
+    __tablename__ = 'food_bank_items'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.Text)
+    image_url = db.Column(db.String(255))
+    quantity_needed = db.Column(db.String(50))  # e.g., "20 Bags", "50 Cans"
+    urgency = db.Column(db.String(20))  # High, Medium, Low

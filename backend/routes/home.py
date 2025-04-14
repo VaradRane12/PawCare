@@ -11,7 +11,6 @@ def home_data():
 
     if not animal:
         return jsonify({"error": "No animals found"}), 404
-    print(animal.image_url)
     return jsonify({
         "id": animal.id,
         "banner_image": animal.image_url,

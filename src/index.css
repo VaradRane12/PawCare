@@ -837,7 +837,7 @@
 }
 
 .foodbank-card {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(12px);
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -865,7 +865,7 @@
 
 .foodbank-info {
   text-align: center;
-  color: #ffffff;
+  color: #1598c8;
 }
 
 .foodbank-info h3 {
@@ -907,39 +907,40 @@
   background: linear-gradient(to right, #21867a, #3bbf96);
 }
 
-.sterilization-form-container {
-  background: #f0f9f8;
+.form-container,
+.sterilization-form-container,
+.rescue-report-form-container {
+  background: #f5f8fa;
   padding: 30px;
   border-radius: 12px;
   max-width: 500px;
-  margin: 60px auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
+  margin: 50px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.sterilization-form-container h2 {
+h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #2a9d8f;
 }
 
-.sterilization-form-container form {
+form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 15px;
 }
 
-.sterilization-form-container input,
-.sterilization-form-container select {
+input,
+select,
+textarea {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  font-family: inherit;
-  background: white;
+  resize: none;
 }
 
-.sterilization-form-container button {
+button {
   padding: 12px;
   background-color: #2a9d8f;
   color: white;
@@ -947,58 +948,9 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.sterilization-form-container button:hover {
+button:hover {
   background-color: #21867a;
-}
-
-
-.rescue-report-form-container {
-  background: #fff4f2;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 500px;
-  margin: 60px auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.rescue-report-form-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #e76f51;
-}
-
-.rescue-report-form-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.rescue-report-form-container input,
-.rescue-report-form-container textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  font-family: inherit;
-  background: white;
-  resize: none;
-}
-
-.rescue-report-form-container button {
-  padding: 12px;
-  background-color: #e76f51;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.rescue-report-form-container button:hover {
-  background-color: #d55b40;
 }
