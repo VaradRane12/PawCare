@@ -10,7 +10,6 @@ import Adopt from "./Adopt";
 import VolunteerPage from "./VolunteerPage";
 import Donate from "./Donate";
 import Faq from "./Faq";
-import DogAdoptionPage from "./DogAdoptionPage";
 import Awareness from "./Awareness";
 import AdoptCat from "./AdoptCat";
 import AdoptDog from "./AdoptDog";
@@ -20,15 +19,22 @@ import RescueReportForm from "./RescueReportForm";
 /*import PaymentPage from "./payment";*/
 function Home() {
   const [data, setData] = useState(null);
-
+  const [spoData, setspoData] = useState(null);
   useEffect(() => {
     fetch("http://127.0.0.1:5000/home-data")
       .then(res => res.json())
       .then(setData)
       .catch(err => console.error("Error fetching home data:", err));
   }, []);
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/least-donated-animal")
+      .then(res => res.json())
+      .then(setspoData)
+      .catch(err => console.error("Error fetching home data:", err));
+  }, []);
 
   if (!data) return <div className="text-center p-4">Loading...</div>;
+  if (!spoData) return <div className="text-center p-4">Loading...</div>;
 
   return (
     <div className="App">
@@ -36,12 +42,13 @@ function Home() {
   <Navbar />
   <QuickActionButton />
   <SponsorBanner
-        id = {data.id}
-        image={data.banner_image}  // use full external URL directly
-        amountDonated={data.amount_donated}
-        totalAmount={data.total_amount}
+        id = {spoData.id}
+        image={spoData.banner_image}  // use full external URL directly
+        amountDonated={spoData.amount_donated}
+        totalAmount={spoData.total_amount}
       />
         <div className="blurred-gradient" />
+
       <AdoptBanner image={data.banner_image} />
       <Footer />
     </div>

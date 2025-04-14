@@ -19,4 +19,19 @@ def home_data():
         "total_amount": animal.total_amount
     })
 
+@main_bp.route("/least-donated-animal")
+def least_donated_animal():
+    from models import AdoptableAnimal
+    
+    animal = AdoptableAnimal.query.order_by(AdoptableAnimal.amount_donated.asc()).first()
+
+    if not animal:
+        return jsonify({"error": "No animals found"}), 404
+
+    return jsonify({
+        "id": animal.id,
+        "banner_image": animal.image_url,
+        "amount_donated": animal.amount_donated,
+        "total_amount": animal.total_amount
+    })
 
