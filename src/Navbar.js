@@ -15,11 +15,9 @@ const Navbar = () => {
       <ul className="navbar__menu">
         <li className="navbar__item" onClick={() => navigate("/adopt")}>Adoption</li>
         <li className="navbar__item" onClick={() => navigate("/volunteering")}>Volunteering</li>
-        <li className="navbar__item" onClick={() => navigate("/medical-records")}>Medical Records</li>
         <li className="navbar__item" onClick={() => navigate("/donate")}>Donation</li>
-        <li className="navbar__item" onClick={() => navigate("/faq")}>FAQ</li>
-        <li className="navbar__item" onClick={() => navigate("/awareness")}>Awareness</li>
-        <li className="navbar__item" onClick={() => navigate("/rescue-cases")}>Rescue Cases</li>
+        <li className="navbar__item" onClick={() => navigate("/faq")}>Breed Detector</li>
+        <li className="navbar__item" onClick={() => navigate("/awareness")}>FAQ</li>
         <li className="navbar__item" onClick={() => navigate("/food-bank")}>Food Bank</li>
 
       </ul>
