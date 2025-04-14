@@ -746,7 +746,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 300px; /* Set max width */
-  height: 350px; /* Set a fixed height for all cards */
+  height: 500px; /* Set a fixed height for all cards */
   margin: auto;
 }
 

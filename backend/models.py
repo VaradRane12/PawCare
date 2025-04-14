@@ -14,6 +14,6 @@ class AdoptableAnimal(db.Model):
     age = db.Column(db.String(20), nullable=True)  # Example: "5 Years"
     behavior = db.Column(db.String(50), nullable=True)
     potty_trained = db.Column(db.String(10), nullable=True)
-
+    vaccinated = db.Column(db.Boolean,nullable = True)
     def __repr__(self):
         return f"<AdoptableAnimal {self.name} ({self.species})>"
