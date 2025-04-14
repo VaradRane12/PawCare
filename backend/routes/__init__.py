@@ -6,3 +6,4 @@ main_bp = Blueprint("main", __name__)
 from . import volunteer
 from . import home
 from . import faq
+from . import dog_adoption
