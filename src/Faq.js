@@ -75,7 +75,8 @@ const Faq = () => {
                     <div className="faq-breed-info">
                         <h2 className="faq-subtitle">Detected Breed:</h2>
                         <p className="faq-breed-name">{breed}</p>
-                    </div>
+                        <img src={URL.createObjectURL(image)} alt="Uploaded Preview" className="your-custom-classes" />
+                        </div>
                 )}
 
                 {info && (

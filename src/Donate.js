@@ -16,6 +16,8 @@ const Donate = () => {
 
   return (
     <div>
+      <div className="space-y-4">
+
       <Navbar />
       <DonateCharacteristics />
 
@@ -33,6 +35,8 @@ const Donate = () => {
 
       <Footer />
     </div>
+    </div>
+
   );
 };
 
