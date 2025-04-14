@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: pawcare-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn 'app:create_app()'
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: pawcare-db
+          property: connectionString
+
+databases:
+  - name: pawcare-db
