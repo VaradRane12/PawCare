@@ -618,94 +618,119 @@
 
 
 /* Awareness Page Container */
-.awareness-page {
-  position: relative;
+/* Container for the entire Awareness page */
+.awareness-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow: hidden;
-  min-height: 100vh;
 }
 
-/* Full-Page Background Video */
-.awareness-full-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  filter: brightness(0.6); /* Darken the video so text stands out */
-}
-
-/* Overlay Container for All Content */
-.awareness-content-overlay {
+/* Main area: contains the video and overlay */
+.awareness-main {
   position: relative;
-  z-index: 1;
-  color: #fff;
-  min-height: 100vh;
-  padding-top: 60px; /* Space for the Navbar */
+  flex: 1;
 }
 
-/* Text Content Container on the Left Side */
-.awareness-text-content {
+/* Background Video: force it to cover the screen */
+.awareness-bg-video {
   position: absolute;
-  top: 50%;
-  left: 50px;
-  transform: translateY(-50%);
-  max-width: 40%;
-  background: rgba(0, 0, 0, 0.6); /* Transparent grayish-black background */
-  border-radius: 5px;
-  box-sizing: border-box;
-  max-height: 80vh;
-  overflow-y: auto; /* Scroll if content becomes too long */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Forces the video to fill the container */
+  z-index: -1;
+  filter: brightness(0.5);
+  background: #000; /* Fallback for letterboxing */
 }
 
-/* Headings and Paragraphs */
-.awareness-text-content h1 {
+/* Overlay: positions the content panel over the video */
+.awareness-overlay {
+  position: absolute;
+  top: 60px;    /* Leaves room for Navbar */
+  left: 40px;
+  bottom: 60px; /* Leaves room for Footer */
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Content Panel: confined to a specific area and scrollable */
+.awareness-content {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 8px;
+  padding: 40px 30px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #fff;
+}
+
+/* Typography */
+.awareness-content h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-}
-
-.awareness-text-content h2 {
-  font-size: 1.8rem;
-  margin-top: 30px;
-  margin-bottom: 15px;
   color: #2a9d8f;
 }
 
-.awareness-text-content p {
+.awareness-content h2 {
+  font-size: 1.6rem;
+  margin: 30px 0 15px;
+  color: #2a9d8f;
+}
+
+.awareness-content p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-/* FAQ Items Styling */
+/* FAQ Items */
 .awareness-faq-item {
-  margin-bottom: 20px;
-  border-left: 4px solid #2a9d8f;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  border-left: 4px solid #2a9d8f;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
 }
 
 .awareness-faq-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #e9e9e9;
 }
 
 .awareness-faq-item p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  color: #ddd;
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-  .awareness-text-content {
+@media (max-width: 900px) {
+  .awareness-overlay {
     position: static;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .awareness-content {
     max-width: 90%;
-    transform: none;
+    padding: 30px 20px;
     margin: 20px auto;
   }
+
+  .awareness-content h1 {
+    font-size: 2rem;
+  }
+
+  .awareness-content h2 {
+    font-size: 1.4rem;
+  }
 }
+
+
 
 
 
