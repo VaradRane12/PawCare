@@ -523,16 +523,19 @@
 
 /* Why to adopt kinda Buttons */
 .adopt-characteristics-container {
-  width: calc(100% - 100px); /* Matches navbar width with 50px padding on each side */
-  margin: 0 auto; /* Centers the container */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px; /* Spacing between boxes */
-  padding: 15px 50px; /* Same padding as navbar */
-  background: linear-gradient(to bottom, #7ce4dc, #e3ebf2); /* Matches navbar background */
-  border-radius: 10px; /* Consistent rounded corners */
+  gap: 20px;
+  padding: 15px 50px; /* Exactly matches the navbar's padding */
+  background: linear-gradient(to bottom, #7ce4dc, #e3ebf2); 
+  border-radius: 10px;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
+
 
 .adopt-characteristics-box {
   flex: 1; /* Ensures equal width for all boxes */
@@ -593,9 +596,9 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .adopt-characteristics-container {
-    flex-direction: column; /* Stacks boxes vertically */
-    width: calc(100% - 40px); /* Adjust for smaller screens */
-    padding: 10px 20px; /* Matches smaller navbar padding */
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px; /* Match .navbar on smaller screens */
     gap: 15px;
   }
 
@@ -612,4 +615,3 @@
     padding: 8px;
   }
 }
-

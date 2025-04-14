@@ -8,6 +8,7 @@ import SponsorBanner from './SponsorBanner';
 import Footer from './Footer';
 import Adopt from "./Adopt";
 import VolunteerPage from "./VolunteerPage";
+import Donate from "./Donate";
 import Faq from "./Faq";
 import DogAdoptionPage from "./DogAdoptionPage";
 function Home() {
@@ -52,9 +53,13 @@ function App() {
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/volunteering" element={<VolunteerPage />} />
         <Route path="/faq" element={<Faq />} /> 
+<<<<<<< HEAD
         <Route path="/dog-adoption" element={<DogAdoptionPage />} />
 
         {/* <Route path="/donate" element={<Donate />} /> */}
+=======
+        <Route path="/donate" element={<Donate />} />
+>>>>>>> 2cc319f4450db0928dabecf83c1c9015fcc58823
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </Router>
