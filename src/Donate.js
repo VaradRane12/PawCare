@@ -22,6 +22,7 @@ const Donate = () => {
       {animals.map((animal) => (
         <div key={animal.id}>
           <SponsorBanner
+          id = {animal.id}
             image={animal.image_url}
             amountDonated={animal.amount_donated}
             totalAmount={animal.total_amount}
