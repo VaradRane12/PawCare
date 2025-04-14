@@ -12,7 +12,7 @@ const QuickActionButton = () => {
       <button className="rescue-btn" onClick={() => navigate("/report-rescue")}>
         Report a Rescue
       </button>
-      <button className="rescue-btn" onClick={() => navigate("/sponsor")}>
+      <button className="rescue-btn" onClick={() => navigate("/donate")}>
         Sponsor an Animal
       </button>
     </div>

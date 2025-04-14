@@ -15,6 +15,8 @@ import Awareness from "./Awareness";
 import AdoptCat from "./AdoptCat";
 import AdoptDog from "./AdoptDog";
 import FoodBank from "./FoodBank";
+import SterilizationForm from "./SterilizationForm";
+import RescueReportForm from "./RescueReportForm";
 /*import PaymentPage from "./payment";*/
 function Home() {
   const [data, setData] = useState(null);
@@ -65,6 +67,10 @@ function App() {
 
         <Route path="/donate" element={<Donate />} />
         <Route path="/food-bank" element={<FoodBank />} />
+        <Route path="/sterilization" element={<SterilizationForm />} />
+        <Route path="/report-rescue" element={<RescueReportForm />} />
+
+
         
         {/*<Route path="/payment" element={<PaymentPage />} />*/}
         {/* <Route path="*" element={<NotFound />} /> */}

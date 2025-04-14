@@ -908,3 +908,51 @@
 .donate-btn:hover {
   background: linear-gradient(to right, #21867a, #3bbf96);
 }
+
+.form-container,
+.sterilization-form-container,
+.rescue-report-form-container {
+  background: #f5f8fa;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2a9d8f;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+}
+
+button {
+  padding: 12px;
+  background-color: #2a9d8f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #21867a;
+}
