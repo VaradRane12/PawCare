@@ -27,7 +27,7 @@ const SponsorBanner = ({ image, amountDonated, totalAmount }) => {
           <div className="sponsor-banner__buttons">
             <button
               className="sponsor-banner__btn sponsor-banner__btn--donate"
-              onClick={() => navigate("/Donate")}
+              onClick={() => navigate("/Payment")}
             >
               Donate!
             </button>

@@ -7,3 +7,4 @@ from . import volunteer
 from . import home
 from . import faq
 from . import dog_adoption
+from . import donate
