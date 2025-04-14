@@ -622,90 +622,89 @@
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+  width: 100%;
 }
 
-/* Full-Page Background Video */
-.awareness-full-video {
+.awareness-bg-video {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
-  min-width: 100%;
+  transform: translateX(-50%);
   min-height: 100%;
   width: auto;
   height: auto;
-  transform: translate(-50%, -50%);
+  object-fit: cover;
   z-index: -1;
-  filter: brightness(0.6); /* Darken the video so text stands out */
+  filter: brightness(0.5); /* To dim the video and make text stand out */
 }
 
-/* Overlay Container for All Content */
-.awareness-content-overlay {
+.awareness-main {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  flex-direction: row; /* Arrange video and content side by side */
+  justify-content: flex-start; /* Align content to the left */
+}
+
+.awareness-overlay {
   position: relative;
   z-index: 1;
   color: #fff;
-  min-height: 100vh;
-  padding-top: 60px; /* Space for the Navbar */
-}
-
-/* Text Content Container on the Left Side */
-.awareness-text-content {
-  position: absolute;
-  top: 50%;
-  left: 50px;
-  transform: translateY(-50%);
-  max-width: 40%;
-  background: rgba(0, 0, 0, 0.6); /* Transparent grayish-black background */
-  border-radius: 5px;
+  width: 30%; /* Set width of the content section to 30% of the screen */
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
   box-sizing: border-box;
+  overflow-y: auto;
   max-height: 80vh;
-  overflow-y: auto; /* Scroll if content becomes too long */
+  margin-left: 10px; /* Add margin to space the content from the left */
 }
 
-/* Headings and Paragraphs */
-.awareness-text-content h1 {
+.awareness-content h1 {
   font-size: 2.5rem;
+  color: #fff;
   margin-bottom: 20px;
 }
 
-.awareness-text-content h2 {
+.awareness-content h2 {
   font-size: 1.8rem;
+  color: #2a9d8f; /* Green color for subheadings */
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #2a9d8f;
 }
 
-.awareness-text-content p {
+.awareness-content p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-/* FAQ Items Styling */
-.awareness-faq-item {
+.faq-item {
   margin-bottom: 20px;
   border-left: 4px solid #2a9d8f;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
+  padding-left: 10px;
 }
 
-.awareness-faq-item h3 {
+.faq-item h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.awareness-faq-item p {
-  font-size: 0.9rem;
+.faq-item p {
+  font-size: 1rem;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .awareness-text-content {
-    position: static;
-    max-width: 90%;
-    transform: none;
-    margin: 20px auto;
+  .awareness-overlay {
+    width: 90%; /* Make the overlay take up more space on smaller screens */
+    margin: 20px auto; /* Center the content with auto margins */
   }
 }
+
+
+
 
 
 
@@ -953,4 +952,205 @@ button {
 
 button:hover {
   background-color: #21867a;
+}
+
+
+.rescue-report-form-container {
+  background: #fff4f2;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 60px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.rescue-report-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e76f51;
+}
+
+.rescue-report-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rescue-report-form-container input,
+.rescue-report-form-container textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  background: white;
+  resize: none;
+}
+
+.rescue-report-form-container button {
+  padding: 12px;
+  background-color: #e76f51;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rescue-report-form-container button:hover {
+  background-color: #d55b40;
+}
+
+
+
+/* Overall FAQ Page Container */
+.faq-page-container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Success Message Styling */
+.faq-success-message {
+  background-color: #d1fae5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 12px 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Form Wrapper Container */
+.faq-form-wrapper {
+  background-color: #ffffff;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.faq-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2a9d8f;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.faq-upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.faq-label {
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.faq-file-input {
+  margin-top: 8px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.faq-upload-btn {
+  background: linear-gradient(to right, #2a9d8f, #56c4a3);
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-upload-btn:hover {
+  background: linear-gradient(to right, #21867a, #3bbf96);
+}
+
+/* Breed Info Display */
+.faq-breed-info {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.faq-subtitle {
+  font-size: 1.4rem;
+  color: #e78f1e;
+  margin-bottom: 10px;
+}
+
+.faq-breed-name {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Detailed Info Box */
+.faq-detail-box {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f7f4;
+  border: 1px solid #d9f0e6;
+  border-radius: 10px;
+}
+
+.faq-detail-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2a9d8f;
+  margin-bottom: 10px;
+}
+
+.faq-detail-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 8px 0;
+}
+
+.faq-breed-image {
+  margin-top: 20px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .faq-form-wrapper {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .faq-title {
+    font-size: 2rem;
+  }
+
+  .faq-upload-btn {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .faq-detail-title {
+    font-size: 1.75rem;
+  }
 }
