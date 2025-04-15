@@ -8,7 +8,6 @@ from models import Volunteer
 def get_volunteers():
     try:
         volunteers = Volunteer.query.all()
-        print(volunteers)
         volunteer_list = []
 
         for v in volunteers:
@@ -23,7 +22,7 @@ def get_volunteers():
                 'availability': v.availability.split(',') if v.availability else []
             })
 
-        return jsonify(volunteer_list[0:3]), 200
+        return jsonify(volunteer_list[-3:]), 200
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
