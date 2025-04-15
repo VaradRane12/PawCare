@@ -630,35 +630,35 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  min-height: 100%;
+  min-height: 100vh;
   width: auto;
-  height: auto;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.5); /* To dim the video and make text stand out */
+  filter: brightness(0.5);
 }
+
 
 .awareness-main {
   display: flex;
-  height: 100vh;
   position: relative;
-  flex-direction: row; /* Arrange video and content side by side */
-  justify-content: flex-start; /* Align content to the left */
+  height: 100vh; /* Ensures full vertical height */
+  width: 100%;
+  overflow: hidden;
 }
 
 .awareness-overlay {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  width: 30%; /* Set width of the content section to 30% of the screen */
+  width: 40%;
+  height: 100vh; /* Match the video's height */
+  overflow-y: auto; /* Scroll inside this area */
   background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   padding: 20px;
-  border-radius: 10px;
+  z-index: 2;
   box-sizing: border-box;
-  overflow-y: auto;
-  max-height: 80vh;
-  margin-left: 10px; /* Add margin to space the content from the left */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
+
 
 .awareness-content h1 {
   font-size: 2.5rem;
