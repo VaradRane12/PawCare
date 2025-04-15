@@ -3,6 +3,7 @@ from config import Config
 from extensions import db, migrate  # ✅ import from extensions
 from flask_cors import CORS
 
+
 def create_app():
     app = Flask(__name__)
     CORS(app)
@@ -14,6 +15,9 @@ def create_app():
 
     from routes import main_bp
     app.register_blueprint(main_bp)
+
+    from chat_routes import chat_bp  # ✅ NEW
+    app.register_blueprint(chat_bp)  # ✅ NEW
 
     return app
 

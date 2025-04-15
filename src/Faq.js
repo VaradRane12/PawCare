@@ -101,6 +101,7 @@ const Faq = () => {
                         )}
                     </div>
                 )}
+                
             </div>
             <Footer />
         </div>
