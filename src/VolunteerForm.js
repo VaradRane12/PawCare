@@ -54,7 +54,7 @@ const VolunteerForm = () => {
       availability: formData.availability,
     };
     
-    fetch("http://localhost:5000/setvolunteers", {
+    fetch("https://pawcare-zgpy.onrender.com/setvolunteers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

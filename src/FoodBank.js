@@ -8,7 +8,7 @@ const FoodBank = () => {
   const [foodItems, setFood] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/food-bank-items")
+    fetch("https://pawcare-zgpy.onrender.com/food-bank-items")
       .then((res) => res.json())
       .then((data) => setFood(data))
       .catch((err) => console.error("Failed to fetch dogs:", err));

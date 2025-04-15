@@ -29,7 +29,7 @@ const FloatingChatbot = () => {
     setMessages(prev => [...prev, userMessage]);
 
     try {
-      const res = await axios.post('http://localhost:5000/chat', { message: input });
+      const res = await axios.post('https://pawcare-zgpy.onrender.com/chat', { message: input });
       const botReply = { text: res.data.reply, sender: 'bot' };
       setMessages(prev => [...prev, botReply]);
     } catch (err) {
