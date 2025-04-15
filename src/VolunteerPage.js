@@ -10,7 +10,7 @@ const VolunteerPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/getvolunteers")
+    fetch("https://pawcare-zgpy.onrender.com/getvolunteers")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch volunteers");
         return res.json();
