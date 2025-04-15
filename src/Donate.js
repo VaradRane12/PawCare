@@ -8,7 +8,7 @@ const Donate = () => {
   const [animals, setAnimals] = useState([]);
 
   useEffect(() => {
-    fetch("https://pawcare-zgpy.onrender.com/donate") // Update this URL if hosted elsewhere
+    fetch("http://localhost:5000/donate") // Update this URL if hosted elsewhere
       .then((res) => res.json())
       .then((data) => setAnimals(data))
       .catch((err) => console.error("Failed to fetch donation animals:", err));

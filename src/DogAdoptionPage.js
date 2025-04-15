@@ -5,7 +5,7 @@ const DogAdoptionPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://pawcare-zgpy.onrender.com/api/dog_adopt")
+    fetch("http://localhost:5000/api/dog_adopt")
       .then((res) => res.json())
       .then((data) => {
         setDogs(data);

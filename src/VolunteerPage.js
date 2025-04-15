@@ -10,7 +10,7 @@ const VolunteerPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://pawcare-zgpy.onrender.com/volunteers")
+    fetch("http://localhost:5000/getvolunteers")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch volunteers");
         return res.json();
@@ -60,9 +60,9 @@ const VolunteerPage = () => {
             <li key={volunteer.id} className="volunteer-card">
               <div className="volunteer-icon">🐾</div>
               <div className="volunteer-info">
-                <h3>{volunteer.name}</h3>
+                <h3>{volunteer.full_name}</h3>
                 <p><strong>Email:</strong> {volunteer.email}</p>
-                <p><strong>Location:</strong> {volunteer.location}</p>
+                <p><strong>Location:</strong> {volunteer.city}</p>
               </div>
             </li>
           ))}

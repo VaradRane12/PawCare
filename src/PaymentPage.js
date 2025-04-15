@@ -50,7 +50,7 @@ const { id, payLimit } = useParams();
     };
   
     try {
-      const response = await fetch('https://pawcare-zgpy.onrender.com/donate', {
+      const response = await fetch('http://localhost:5000/donate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(donationData),

@@ -1,9 +1,20 @@
 from extensions import db
 
 class Volunteer(db.Model):
+
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
+    full_name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
+    phone_number = db.Column(db.String(20), nullable=False)
+    city = db.Column(db.String(100), nullable=False)
+    motivation = db.Column(db.Text, nullable=False)  # "Why do you want to volunteer?"
+    
+    # Comma-separated list of roles chosen (e.g., "Animal Care,Fundraising")
+    preferred_roles = db.Column(db.Text, nullable=True)
+    
+    # Comma-separated list of available days (e.g., "Monday,Wednesday,Saturday")
+    availability = db.Column(db.Text, nullable=True)
+
 class AdoptableAnimal(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
@@ -26,3 +37,4 @@ class FoodBankItem(db.Model):
     image_url = db.Column(db.String(255))
     quantity_needed = db.Column(db.String(50))  # e.g., "20 Bags", "50 Cans"
     urgency = db.Column(db.String(20))  # High, Medium, Low
+

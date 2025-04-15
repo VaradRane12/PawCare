@@ -43,18 +43,54 @@ const VolunteerForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitted Form:", formData);
-    alert("Thank you for your interest in volunteering! 🐾");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      city: "",
-      reason: "",
-      roles: [],
-      availability: [],
-    });
+    
+    const volunteerData = {
+      full_name: formData.name,
+      email: formData.email,
+      phone_number: formData.phone,
+      city: formData.city,
+      motivation: formData.reason,
+      preferred_roles: formData.roles,
+      availability: formData.availability,
+    };
+    
+    fetch("http://localhost:5000/setvolunteers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(volunteerData),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          // Log the server's error message
+          return res.json().then((err) => {
+            throw new Error(err.message || 'Failed to submit form');
+          });
+        }    
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Volunteer successfully added:", data);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          city: "",
+          reason: "",
+          roles: [],
+          availability: [],
+        });
+        alert("Thank you for your interest in volunteering! 🐾");
+      })
+      .catch((err) => {
+        console.error("Error submitting form:", err);
+        alert("There was an error while submitting your form. Please try again.");
+      });
   };
+  
+
+  
 
   return (
     <div className="volunteer-form-page">
