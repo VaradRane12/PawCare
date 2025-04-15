@@ -21,13 +21,13 @@ function Home() {
   const [data, setData] = useState(null);
   const [spoData, setspoData] = useState(null);
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/home-data")
+    fetch("https://pawcare-zgpy.onrender.com/home-data")
       .then(res => res.json())
       .then(setData)
       .catch(err => console.error("Error fetching home data:", err));
   }, []);
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/least-donated-animal")
+    fetch("https://pawcare-zgpy.onrender.com/least-donated-animal")
       .then(res => res.json())
       .then(setspoData)
       .catch(err => console.error("Error fetching home data:", err));

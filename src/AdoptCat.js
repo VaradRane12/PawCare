@@ -7,7 +7,7 @@ const AdoptDog = () => {
   const [dogs, setDogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/cat_adopt")
+    fetch("https://pawcare-zgpy.onrender.com/cat_adopt")
       .then((res) => res.json())
       .then((data) => setDogs(data))
       .catch((err) => console.error("Failed to fetch dogs:", err));
