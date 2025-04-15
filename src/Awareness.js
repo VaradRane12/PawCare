@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import FloatingChatbot from "./FloatingChatBot";
 
 const Awareness = () => {
   return (
@@ -69,6 +70,7 @@ const Awareness = () => {
         </div>
       </div>
       {/* Footer remains at the bottom */}
+      <FloatingChatbot />
       <Footer />
     </div>
   );

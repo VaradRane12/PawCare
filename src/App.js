@@ -50,7 +50,7 @@ function Home() {
         totalAmount={spoData.total_amount}
       />
         <div className="blurred-gradient" />
-
+        
       <AdoptBanner image={data.banner_image} />
       <Footer />
     </div>
