@@ -1150,3 +1150,211 @@ button:hover {
     font-size: 1.75rem;
   }
 }
+
+
+
+/* VolunteerPage.css */
+
+.volunteer-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* Top CTA Section */
+.volunteer-cta-top {
+  text-align: center;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 3rem 1rem 2rem;
+}
+
+.volunteer-cta-top h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.volunteer-cta-top p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+}
+
+.join-button {
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.join-button:hover {
+  background-color: #e76f51;
+}
+
+/* Hero Section */
+.volunteer-hero {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(to right, #f4e9e9, #dff0ea);
+}
+
+.volunteer-hero h1 {
+  font-size: 2.5rem;
+  color: #2a9d8f;
+  margin-bottom: 0.5rem;
+}
+
+.volunteer-hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Volunteer Cards */
+.volunteer-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.volunteer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.volunteer-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 280px;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-5px);
+}
+
+.volunteer-icon {
+  font-size: 2rem;
+}
+
+.volunteer-info h3 {
+  margin: 0;
+  color: #2a9d8f;
+}
+
+.volunteer-info p {
+  margin: 0.3rem 0;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e76f51;
+}
+
+
+.volunteer-form-page {
+  background-color: #f9f9f9;
+  padding-top: 60px;
+}
+
+.volunteer-form-container {
+  max-width: 700px;
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.volunteer-form-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2a9d8f;
+  margin-bottom: 10px;
+}
+
+.volunteer-form-intro {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.volunteer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.volunteer-form-label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.volunteer-form-label input,
+.volunteer-form-label textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+.volunteer-form-label textarea {
+  resize: vertical;
+}
+
+.volunteer-form-fieldset {
+  border: none;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.volunteer-form-legend {
+  font-weight: bold;
+  color: #2a9d8f;
+  margin-bottom: 0.5rem;
+}
+
+.volunteer-form-checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.volunteer-form-submit-btn {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 2rem auto 0;
+}
+
+.volunteer-form-submit-btn:hover {
+  background-color: #21867a;
+}

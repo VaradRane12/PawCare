@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const VolunteerPage = () => {
   const [volunteers, setVolunteers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://pawcare-zgpy.onrender.com/volunteers")
@@ -21,24 +25,51 @@ const VolunteerPage = () => {
       });
   }, []);
 
-  if (loading) return <p className="text-center mt-10">Loading volunteers...</p>;
-  if (error) return <p className="text-red-500 text-center mt-10">Error: {error}</p>;
+  const handleJoinClick = () => {
+    navigate("/volunteer-form");
+  };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">Volunteer List</h1>
-      <ul className="space-y-4">
-        {volunteers.map((volunteer) => (
-          <li
-            key={volunteer.id}
-            className="border rounded-lg p-4 shadow-sm bg-white"
-          >
-            <p><strong>Name:</strong> {volunteer.name}</p>
-            <p><strong>Email:</strong> {volunteer.email}</p>
-            <p><strong>Location:</strong> {volunteer.location}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="volunteer-page">
+      <Navbar />
+
+      {/* CTA at the Top */}
+      <div className="volunteer-cta-top">
+        <h2>Want to Join Us?</h2>
+        <p>
+          Volunteering is a powerful way to help animals in need. Join the PawCare family
+          and make a difference today!
+        </p>
+        <button className="join-button" onClick={handleJoinClick}>
+          Become a Volunteer
+        </button>
+      </div>
+
+      <div className="volunteer-hero">
+        <h1>Meet Our Volunteers</h1>
+        <p>
+          These are the amazing people helping transform lives — one paw at a time.
+        </p>
+      </div>
+
+      <div className="volunteer-container">
+        {loading && <p className="loading">Loading volunteers...</p>}
+        {error && <p className="error">{error}</p>}
+        <ul className="volunteer-list">
+          {volunteers.map((volunteer) => (
+            <li key={volunteer.id} className="volunteer-card">
+              <div className="volunteer-icon">🐾</div>
+              <div className="volunteer-info">
+                <h3>{volunteer.name}</h3>
+                <p><strong>Email:</strong> {volunteer.email}</p>
+                <p><strong>Location:</strong> {volunteer.location}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <Footer />
     </div>
   );
 };
