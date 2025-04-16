@@ -1,4 +1,4 @@
-﻿absl-py==2.2.2
+io﻿absl-py==2.2.2
 alembic==1.15.2
 astunparse==1.6.3
 blinker==1.9.0
@@ -16,6 +16,7 @@ Flask-SQLAlchemy==3.1.1
 flatbuffers==25.2.10
 gast==0.6.0
 google-pasta==0.2.0
+openai
 greenlet==3.1.1
 grpcio==1.71.0
 h5py==3.13.0
