@@ -1,4 +1,4 @@
-io﻿absl-py==2.2.2
+absl-py==2.2.2
 alembic==1.15.2
 astunparse==1.6.3
 blinker==1.9.0
