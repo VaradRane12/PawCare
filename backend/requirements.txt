@@ -9,6 +9,7 @@ colorama==0.4.6
 scikit-learn
 dotenv==0.9.9
 Flask==3.1.0
+nltk
 flask-cors==5.0.1
 Flask-Migrate==4.1.0
 Flask-SQLAlchemy==3.1.1
