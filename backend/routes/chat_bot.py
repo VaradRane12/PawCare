@@ -15,7 +15,7 @@ from openai import OpenAI
 load_dotenv()
 
 # Ensure required NLTK data is downloaded
-nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab')
 nltk.download('stopwords', quiet=True)
 nltk.download('wordnet', quiet=True)
 
