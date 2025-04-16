@@ -15,9 +15,8 @@ def create_app():
 
     from routes import main_bp
     app.register_blueprint(main_bp)
-
-    from chat_routes import chat_bp  # ✅ NEW
-    app.register_blueprint(chat_bp)  # ✅ NEW
+    import nltk
+    nltk.download('punkt_tab')
 
     return app
 

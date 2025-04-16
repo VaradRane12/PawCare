@@ -10,3 +10,4 @@ from . import dog_adoption
 from . import donate
 from . import cat_adoption
 from . import food_bank
+from . import chat_bot
